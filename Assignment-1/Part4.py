@@ -1,19 +1,4 @@
-"""
-void push(<Node> node) → Adds the node to the end of the list
-<Node> pop() → Removes the last node at the end of the linked list, returns that data
-void insert(uint index,<Node> node) → Adds a single node containing data to a chosen location in the list. If the index is above the size of the list, do nothing
-void remove(uint index) → remove/delete a single node at the index location in the list. If the node doesn’t exist at the index, do nothing
-<Node> elementAt(uint index) → Returns a pointer to the node at the index location in the list. If the node doesn’t exist at the index, return nil/null
-uint size() → Returns the length of the list.
-void printList() → Returns a string representation of the linked list
 
-Implement a function to check if a linked list is a palindrome.
-
-REVERSE LINKED LIST IN 3 WAYS:
-1. ITERATIVELY
-2. USING A STACK
-3. RECURSIVELY
-"""
 class Node:
     def __init__(self, val):
         self.val = val
@@ -108,35 +93,6 @@ class LinkedList:
                 print(temp.val)
             temp = temp.next
 
-    # iterative version of reversing a linked list
-    def reverseLinkedList(self):
 
-        if not self.head.next:
-            return
 
-        temp = self.head.next
-        node = None
-
-        while temp:
-            save = temp.next
-            temp.next = node
-            node = temp
-            temp = save
-
-        self.head.next = node
-
-list = LinkedList()
-list.push(Node(1))
-list.push(Node(2))
-list.insert(3,Node(3))
-list.push(Node(4))
-list.push(Node(5))
-list.printList()
-print("--------")
-list.remove(6)
-list.printList()
-print("aaaaaaaa")
-print(list.elementAt(-1).val)
-list.reverseLinkedList()
-list.printList()
 

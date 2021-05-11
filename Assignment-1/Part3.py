@@ -1,25 +1,4 @@
-"""
-STACK
-push() → Pushes an integer on top of the stack
-pop() → Removes what is on the top of the stack, and returns that value to the caller
-top() → Looks at the top value, and returns it. Does not manipulate the stack
-isEmpty() → Returns True or False if the stack is Empty or not, respectively
-size() → Returns an integer value with the count of elements in the stack
 
-new method to your Stack class called min(), which returns the minimum element of
-the stack in O(1) time, as opposed to O(n) time.
-
-Allow your stack to handle any type of object as input type, not just integers
-
-enqueue() → adds an item to the queue
-dequeue() → removes an item from the queue
-rear() → returns the item at the end of the queue
-front() → returns the item at the front of the queue
-size() → returns the size of the queue
-isEmpty() → returns whether or not the queue is empty
-
-Allow your queue to handle any type of object as input type, not just integers.
-"""
 class Node:
     def __init__(self, val):
         self.val = val
